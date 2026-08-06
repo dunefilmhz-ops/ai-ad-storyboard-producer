@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "profiles": {
+    "seedance-2.0-mini": {
+      "kind": "image-to-video",
+      "max_request_seconds": 15,
+      "recommended_request_seconds": [4, 10],
+      "action_budget": {
+        "4-5": 2,
+        "6-10": 3,
+        "11-15": 4
+      },
+      "high_risk_tags": [
+        "multi_character_contact",
+        "complex_hands",
+        "fall",
+        "fight",
+        "transformation",
+        "scene_change",
+        "exact_text"
+      ],
+      "notes": "Editable working profile based on the current production workflow. Reconfirm limits when the model version or platform changes."
+    },
+    "gpt-image-keyframe": {
+      "kind": "image-generation",
+      "max_request_seconds": null,
+      "recommended_request_seconds": null,
+      "action_budget": null,
+      "high_risk_tags": ["multi_character_contact", "complex_hands", "exact_text"],
+      "notes": "Use for identity anchors, environment plates and keyframes; exact text and UI remain post-production responsibilities."
+    },
+    "manual-video-model": {
+      "kind": "image-to-video",
+      "max_request_seconds": null,
+      "recommended_request_seconds": null,
+      "action_budget": null,
+      "high_risk_tags": [],
+      "notes": "Fill project-specific limits before automated budget validation."
+    }
+  }
+}

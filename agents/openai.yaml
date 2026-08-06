@@ -1,0 +1,4 @@
+interface:
+  display_name: "AI 买量分镜制作"
+  short_description: "把甲方脚本转为可生成、可剪辑、可验收的通用 AI 买量分镜方案"
+  default_prompt: "使用 $ai-ad-storyboard-producer 分析甲方需求并输出优化分镜、首帧提示词、视频提示词和质检清单。"

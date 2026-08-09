@@ -492,7 +492,7 @@ def parser() -> argparse.ArgumentParser:
     init.add_argument("--output", required=True)
     init.add_argument("--title", required=True)
     init.add_argument("--project-id")
-    init.add_argument("--aspect-ratio", default="9:16")
+    init.add_argument("--aspect-ratio", default="16:9")
     init.add_argument("--resolution", default="720x1280")
     init.add_argument("--fps", type=float, default=30)
     init.add_argument("--duration", type=float)

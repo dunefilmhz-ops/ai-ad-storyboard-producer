@@ -37,6 +37,8 @@ Extract or infer:
 - provided assets, missing assets, client references and prohibited content;
 - generation tools and model limits.
 
+Default to `16:9` horizontal delivery when the client, platform and supplied assets do not specify an aspect ratio. Treat `16:9` as the preferred working canvas for keyframes, storyboards and video prompts. Override it only when the client delivery specification, publishing platform, existing campaign format or approved reference composition explicitly requires another ratio such as `9:16`, `1:1` or `4:5`. Record every override in the brief assumptions and keep all downstream prompts, safe areas and delivery checks on the selected ratio.
+
 Create a script fact lock before creative expansion: exact dialogue, event order, action results, character ownership and non-negotiable selling points. If the client requires faithful adaptation, preserve these facts exactly. Add only visual coverage, anticipation, reaction, inserts or editorial bridges that do not create a new story fact.
 
 Accept pure text. Do not require a reference image or video. If a missing choice does not materially change the result, use a labeled assumption and continue. Ask only when a missing decision changes scope, brand accuracy, legal safety or delivery format.

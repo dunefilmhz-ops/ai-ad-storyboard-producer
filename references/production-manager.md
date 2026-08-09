@@ -8,7 +8,7 @@ Use these scripts when the user wants a reusable project structure, status track
 python scripts/project_manager.py init \
   --output /path/to/project \
   --title "Project title" \
-  --aspect-ratio 9:16 \
+  --aspect-ratio 16:9 \
   --resolution 720x1280 \
   --fps 30 \
   --video-model seedance-2.0-mini

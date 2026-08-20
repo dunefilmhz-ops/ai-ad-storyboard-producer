@@ -30,6 +30,10 @@ Every production shot should justify itself through one or more observable chang
 
 Reaction, insert and spatial re-establishing shots may have small deltas, but their function must be explicit. Do not impose a universal shot duration or shot count.
 
+## Emotion and sound curve
+
+For multi-beat narrative work, map each beat on a relative 0–10 intensity curve and annotate setup, escalation, peak and release. Add intended silence, room tone, SFX emphasis, BGM entry/exit and transition points. Use the curve to diagnose a flat script and to guide edit density and sound design; do not let it override explicit client timing, dialogue or story facts. The scale is comparative within the current piece and should not be treated as scientific measurement.
+
 ## Field policy and asset gate
 
 Classify production fields as:
@@ -56,6 +60,8 @@ Store one scene-level source of truth:
 For each shot, record `axis_id`, `camera_side`, `world_space` and `screen_space`. World space states physical location and orientation. Screen space states frame position, on-screen facing and movement direction. Crossing an axis is allowed only with an explicit neutral, on-axis, motivated moving, spatial re-establishing or clearly signaled transition shot.
 
 Camera difference is a comprehension test, not a fixed 45-degree law. Adjacent coverage should change at least one meaningful dimension: shot size, camera side, height, subject emphasis, information or emotional function.
+
+Exterior movement across multiple locations uses the same principle at route scale: store ordered nodes, reference direction, approach/departure vectors, relative distance or time when justified, terrain/elevation and allowed view directions before generating plates.
 
 ## Motion and transitions
 
@@ -84,6 +90,20 @@ Score 1–10 using character count, contact, prop interaction, motion, camera mo
 - 8–10: split coverage, reduce simultaneous changes or use Pose A/B/C.
 
 Priorities: `A` core hook/payoff, `B` main narrative, `C` bridge. Before regeneration, set `failure_source` to prompt, asset, spatial, motion, camera or model and change the responsible layer.
+
+## Director map
+
+For a complete production, compile the approved decisions into one operational map. Each generation or post unit should link:
+
+- story beat and observable delta;
+- emotion/sound target;
+- approved character state, prop and environment IDs;
+- scene node, axis or camera zone;
+- generation and edit duration;
+- generation route, model/profile and expected handoff state;
+- priority, complexity/risk, review focus and gate status.
+
+This is a task map for production, not a fixed-format storyboard and not a prescribed number of units. Derive the units from the current edit and include post-only units for exact text, UI, BGM, grade or effects when generation should not own them.
 
 ## QA order
 

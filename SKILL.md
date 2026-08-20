@@ -22,6 +22,7 @@ Load specialized references only when relevant:
 
 - For story-state deltas, field locking, scene axes, cut motivation, motion phases, generation complexity or failure diagnosis, read [references/director-model.md](references/director-model.md).
 - For character turnarounds, wardrobe/prop sheets, empty environment plates, reverse angles or side views, read [references/asset-foundation.md](references/asset-foundation.md).
+- For family resemblance, derived creature forms, recurring-prop triage, exterior route topology, color anchors or nine-grid environment expansion, also read [references/asset-foundation.md](references/asset-foundation.md).
 - For dialogue-led live action, vertical drama, emotional reaction coverage, action coverage or sliced generations, read [references/dialogue-and-camera-grammar.md](references/dialogue-and-camera-grammar.md).
 - For reusable project folders, shot status/version records, action-budget validation, contact sheets or review-board data, read [references/production-manager.md](references/production-manager.md) and use the bundled scripts.
 
@@ -50,6 +51,8 @@ Extract or infer:
 - characters, identity anchors, costume states, props, environments and style;
 - provided assets, missing assets, client references and prohibited content;
 - generation tools and model limits.
+
+For narrative work with multiple beats, create a compact 0–10 emotion-and-sound curve before shot expansion. Mark setup, escalation, peak, release, silence/room-tone zones, BGM entry or exit, and the intended edit effect. Treat the numbers as relative planning aids, not objective measurements or a fixed dramatic formula.
 
 Default to `16:9` horizontal delivery when the client, platform and supplied assets do not specify an aspect ratio. Treat `16:9` as the preferred working canvas for keyframes, storyboards and video prompts. Override it only when the client delivery specification, publishing platform, existing campaign format or approved reference composition explicitly requires another ratio such as `9:16`, `1:1` or `4:5`. Record every override in the brief assumptions and keep all downstream prompts, safe areas and delivery checks on the selected ratio.
 
@@ -93,6 +96,8 @@ Create explicit state tables before prompts:
 - screen direction, position, gaze and action continuity;
 - effect color, source, path and interaction with the scene.
 
+When characters are biologically related or one form derives from another, define the parent/base identities first and make the relationship observable through a small set of inherited traits. Generate the dependent identity or creature form only after its source identities are approved. Do not force resemblance when the script does not establish it, and do not treat a generated resemblance as a factual claim about real people.
+
 Classify important fields before batch prompting:
 
 - `locked`: identity, approved silhouette, permanent marks, topology and other facts that cannot change without approval;
@@ -102,6 +107,8 @@ Classify important fields before batch prompting:
 Keep character identity, appearance state and performance state separate. Performance is shot data, not a new asset. Bind every recurring shot to one approved appearance-state asset, except the shot that visibly performs the transition.
 
 For every recurring scene, define a compact Scene Spatial Bible before axis-sensitive coverage: top-down layout, north/reference direction, entrances, persistent landmarks, light sources, character zones, scene axes and allowed/risky/forbidden camera zones. Record both world-space truth and its screen-space projection. A reverse angle may swap screen left/right; it may not mirror the physical room.
+
+For exterior journeys or chases across multiple landmarks, add a route topology before plates: ordered nodes, approximate direction/elevation, travel path, relative distance or travel time when story-relevant, entrances/exits and allowed view directions. Use the topology as the source of truth for later exterior plates; do not invent false precision when the script supplies none.
 
 For every production shot, add a compact `blocking_diagram` that can be reviewed independently from prose. It must name the camera, screen or space orientation, each important character's position and facing, and any meaningful movement arrow. Multi-character contact, entrances, exits, fights, crossings and axis-sensitive shots must use an explicit diagram before keyframe approval. For an empty environment or single-subject shot, show the camera, subject zone and motion direction instead of leaving the field blank.
 
@@ -117,7 +124,11 @@ Return image-storyboard/keyframe prompts first unless the user explicitly asks o
 
 Treat uploaded references as evidence, never as automatically approved production assets. Before recurring characters or locations enter batch keyframe generation: extract authoritative traits; generate a clean identity turnaround for each recurring character; split each costume, damage state, upgrade or creature transformation into a separately named stage asset; generate empty environment masters from one spatial contract; place those derived assets in the board asset library as `draft` or `review` and wait for approval.
 
+Create reusable prop assets only when a prop recurs, changes state, drives action/continuity, carries a selling point or would be costly to regenerate inconsistently. A one-off background object normally stays shot-dynamic; a one-off hero prop may still require an asset.
+
 For every recurring connected interior, build a complete spatial coverage pack rather than a single attractive plate. At minimum include: approach-space master, approach-space reverse, destination-room master and destination-room reverse. Add side views when staging needs them. Every plate must state camera zone and view direction, shared threshold or doorway, hinge side and swing direction, persistent landmarks, light sources and which landmarks appear frame-left/frame-right after reversal. Approve the pack as one linked asset set; reject any plate that invents a second door, mirrors an asymmetric landmark, changes room scale or contradicts the master floor plan.
+
+When a location needs broad angle coverage, approve one spatially correct master first, then expand a contact sheet or nine-grid of purposeful camera zones, shot sizes and lighting states. A grid is a review aid, not nine automatically usable assets: validate each cell against the same topology and register approved cells separately. Lock compact interior/exterior color-and-light anchors before batch generation when palette drift is a material risk; describe dominant colors, practical sources, contrast and prohibited drift rather than relying on a decorative swatch alone.
 
 Do not combine multiple states of one character into one ambiguous anchor. Bind every shot to the exact stage asset it uses. If provisional keyframes already exist, keep them visibly provisional and re-check or regenerate them after the asset gate is approved.
 
@@ -148,6 +159,8 @@ Group work by asset readiness and review risk, not by story theme. Prioritize:
 5. UI, gameplay and end card.
 
 Provide a batch table with input asset, model, duration, prompt, expected end frame and review focus.
+
+For complete productions, also provide a director-map view: one row per generation or post-production unit, linked to story beat, emotion/sound curve, approved input assets, location node or scene axis, duration, generation route, priority, complexity/risk, expected handoff state and review gate. Derive its row count from the actual edit; never copy a case-study count such as 24 video units plus one post unit.
 
 Assign each shot a generation priority and complexity score. Use `A` for critical hooks, payoffs and identity close-ups, `B` for main narrative coverage and `C` for replaceable bridges. Score complexity from 1–10 using character count, contact, props, motion, camera motion, transformation and continuity dependency. Scores 8–10 should normally use split coverage, reduced motion or Pose A/B/C. Before regenerating a failed shot, classify the source as prompt, asset, spatial, motion, camera or model; do not spend another iteration without changing the responsible layer.
 
